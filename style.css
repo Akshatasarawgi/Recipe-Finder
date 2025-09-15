@@ -1,0 +1,730 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', 'Nunito Sans', sans-serif;
+    margin: 0 auto;
+    background-color: rgb(246,245,241);
+    text-align: center;
+    color: rgb(22,58,52);
+}
+
+main, footer {
+    padding: 0 8%;
+}
+h1 {
+    font-size: 72px;
+}
+h2 {
+    font-size: 52px;
+}
+h3 {
+    font-size: 24px;
+}
+.nav-bar {
+    display: flex;
+    padding: 1% 5% 1% 3%;
+    font-size: 1.05em;
+    align-items: center;
+    border-bottom: 0.1em solid rgb(224,230,227);
+    justify-content: space-between;
+    position: relative;
+}
+.nav-bar-list {
+    display: flex;
+    width: 60%;
+    gap: 2.5em;
+    justify-content: space-between;
+    list-style: none;
+}
+.drop-down-list {
+    display: none;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    width: 300px;
+    height: max-content;
+    padding: 2% 5% 2% 3%;
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    z-index: 1;
+    margin-top: 1%;
+}
+.menu-tab {
+    display: none;
+    background-color:  rgb(224,230,227);
+    padding: 1%;
+    border-radius: 5px;
+}
+.show {
+    display: flex;
+}
+.drop-down-list ul {
+    text-align: start;
+    margin: 1% 0;
+}
+.drop-down-list li {
+    list-style: none;
+    padding: 8% 0;
+}
+.drop-down-list .nav-bar-link {
+    width: 100%;
+    padding: 2% 0;
+}
+.nav-list {
+    display: flex;
+    gap: 2.5em;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+    font-size: 1.05em;
+}
+.nav-bar-link  {
+    align-self: flex-end;
+}
+ul li a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+.nav-list li a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.5em;
+    text-decoration-color: rgb(254,159,107);
+}
+.browse-link {
+    border-radius: 8px;
+    padding: 1% 1.5%;
+    background-color: rgb(22,58,52);
+    border: none;
+    color: #FFFFFF;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    min-width: 120px;
+    height: auto;
+}
+.browse-link:hover {
+    transform: scale(1.05);
+}
+/* Main Page Introduction sectiom */
+.header-info {
+    margin-top: 5%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+@media(max-width: 850px) {
+    align-items: start;
+    text-align: start;
+    }
+}
+.header-info h1{
+    line-height: 1.1;
+    margin: 1.5% 0;  
+}
+.header-info .color-word {
+  position: relative;
+  display: inline-block; 
+  border-radius: 8px;
+  overflow: hidden;
+  line-height: 1; /*This is to align the words on the same line*/
+  vertical-align: middle; /*This is to align the words on the same line*/
+  padding-bottom: 10px;
+}
+.header-info .color-word::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  height: 50%;      
+  background: rgb(252, 224, 194);
+  border-radius: inherit; 
+  z-index: -1;         
+}
+.header-info p {
+    font-weight: 400;
+    margin: 3% auto;
+    font-size: 18px;
+}
+.header-info .main-img {
+    min-width: 200px;
+    max-width: 1250px;
+    border: 5px solid white;
+    width: 100%;
+    z-index: 1;
+    margin: 5% auto 2%;
+    border-radius: 10px;
+    position: relative;
+    display: inline-block;
+    width: 100%; 
+}
+.header-info .fg {
+    position: absolute;
+    top: 250px;
+    left: 0;
+    width: 100%;
+    object-fit: contain;
+    z-index: 0;
+
+    @media (max-width: 977px){
+       top: 350px; 
+    }
+    @media (max-width: 596px) {
+        top: 400px;
+    }
+}
+.fg,
+.img-fork,
+.img-knife {
+  pointer-events: none; 
+}
+
+/* Features Section */
+.features {
+    margin: 2% auto;
+    border-bottom: 0.1em solid rgb(224,230,227);
+    padding: 4% 0;
+
+    @media( max-width: 850px) {
+        text-align: start;
+    }
+}
+.features-cards {
+    display: flex;
+    gap: 1%;
+    margin-top: 3%;
+}
+.features-cards .card {
+    padding: 1% 2%;
+    text-align: left;
+}
+.card img {
+    background-color: white;
+    padding: 2.5%;
+    border-radius: 10px;
+    height: 3em;
+    margin: 2% auto;
+
+    @media (max-width: 850px) {
+        height: 4.5em;
+    }
+}
+.card h3{
+    margin: 2% 0;
+}
+.card p {
+     font-size: 18px;
+}
+/* Real-Life Section */
+.real-life-section, .beyond-the-plate{
+    display: flex;
+    margin: 5% auto;
+    align-items: center;
+
+    @media (max-width: 850px) {
+    flex-direction: column; 
+    }
+}
+.real-life-card, .about-info > div, .beyond-card {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 2% 5% 2% 0;
+}
+.real-life-card h2,.call-to-action-section h2, .beyond-card h2 {
+    margin: 3% 0;
+}
+.call-to-action-section h2 {
+    z-index: 2;
+}
+.real-life-card p, .call-to-action-section p, .about-info p, .beyond-card p, ul li {
+    font-size: 18px;
+}
+.call-to-action-section p {
+    z-index: 2;
+}
+.call-to-action-section a {
+    margin-top: 1.5%;
+}
+.real-life-section img, .beyond-the-plate img {
+    max-width: 900px;
+    min-width: 200px;
+    height: auto; 
+    width: 100%;
+    border-radius: 10px;
+
+    @media(max-width: 850px) {
+        margin: 4% 0;
+    }
+}
+/* Call to action section */
+.call-to-action-section {
+    background-color: rgb(224,230,227);
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% auto;
+    padding: 5% 0 8%;
+    position: relative; /* This helps the background contain the knife and fork design and avoid any overflow*/
+    overflow: hidden;
+}
+.call-to-action-section .browse-link {
+    z-index: 2;
+}
+.img-fork {
+    position: absolute;
+    bottom: -20px;
+    left: -90px;
+   /* width: 30%; */
+    z-index: 1;
+}
+.img-knife{
+    position: absolute;
+    bottom: 20px;
+    right: -80px;
+     /* width: 30%; */
+    z-index: 1;
+}
+/* Footer section */
+footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 2% auto;
+}
+footer .social-media-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 8em;
+    
+}
+/* styling About page*/
+/* Introduction section */
+
+.about-info h1 {
+    font-size: 18px;
+    font-weight: 500;
+}
+.about-info h1 span {
+    background-color: rgb(254,159,107);
+    padding: 1% 2%;
+    border-radius: 8px;
+}
+.about-info  {
+    display: flex;
+    align-items: center;
+    border-bottom: 0.1em solid rgb(224,230,227);
+    margin: 3% auto; 
+    padding: 3% 0 5% 0;
+
+    @media (max-width: 850px) {
+        flex-direction: column;
+    }
+}
+.about-info img {
+    max-width: 800px;
+    min-width: 100px;
+    height: auto; 
+    width: 100%;
+    border-radius: 10px;
+    object-fit: contain;
+}
+.about-info h2 {
+    margin: 3% 0;
+}
+
+/* Why we exist section ,  Our food philosophy */
+.why-we-exist, .our-food-philosophy {
+    display: flex;
+    align-items: start;
+    gap: 2%;
+    justify-content: space-between;
+    padding: 2% 0;
+    border-bottom: 0.1em solid rgb(224,230,227);
+    width: 100%;
+    @media (max-width: 850px) {
+        flex-direction: column;
+    }
+}
+.why-we-exist h2, .our-food-philosophy h2 {
+   padding: 1% 0;
+   text-align: start;
+}
+.why-we-exist h3, .our-food-philosophy h3 {
+    margin: 1% 0;
+}
+.why-we-exist ul , .our-food-philosophy ul, .complete-detail ul {
+    max-width: 60%;
+    text-align: start;
+    list-style: none;
+
+    @media (max-width: 850px) {
+        max-width: 100%;
+    }
+}
+.why-we-exist ul li , .our-food-philosophy ul li , .complete-detail ul li {
+    position: relative;
+    vertical-align: middle;
+    padding-left: 3rem;
+    margin: 3% 0;
+}
+.why-we-exist ul li::before , .our-food-philosophy ul li::before {
+    content: url('./assets/images/icon-bullet-point.svg');
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.beyond-card ul {
+    padding-left: 6%;
+}
+/*Recipes Page*/
+.recipes-info {
+   margin: 3% auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @media(max-width: 850px) {
+        text-align: start;
+        margin: 5% 0; 
+    }
+}
+
+.recipes-info p {
+    width: 100%;
+   /* min-width: 320px;
+    max-width: 550px;*/
+    margin: 2% auto;
+    font-size: 20px;
+}
+/* Container section */
+.filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3% auto;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 2%;
+
+
+     @media (max-width: 1110px) {
+      justify-content: center;
+    }
+
+    @media (max-width: 800px) {
+        flex-direction: column;
+    }
+}
+.filter-left {
+    display: flex;
+    gap: 1em;
+    position: relative;
+
+     @media (max-width: 650px) {
+        width: 90%;
+        flex-direction: column;
+    }
+}
+.filter-right {
+    position: relative;
+    display: inline-block;
+
+    @media (max-width: 800px) {
+       
+        margin: 2% 0;
+    }
+}
+.max {
+    background-color: #FFFFFF;
+    padding: 4% 5% 4% 5%;
+    border-radius : 10px;
+    min-width: 180px;
+    border: 0.1em solid rgb(208,220,217);
+}
+.max::after {
+    content: url('./assets/images/icon-chevron-down.svg');
+    position: absolute;
+    padding: 0 1.5%;
+    cursor: pointer;
+}
+.display-minutes {
+    flex-direction: column;
+    background-color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 2% 8% 2% 3%;
+    margin-top: 2%;
+    border-radius: 10px;
+    align-items: start;
+    position: absolute;
+} 
+.display-prep-time{
+    display: none;
+    z-index: 1;
+}
+.display-cook-time {
+    display: none;
+    z-index: 1;
+}
+
+.display-minutes > * {
+    margin: 4% 0;
+}
+input[type=radio] {
+    margin-right: 1em;
+}
+.search { /* pseudo elements dont work on input fields*/ 
+    line-height: 2.2em;
+    border-radius: 10px;
+    border: none;
+    padding: 1% 5% 1% 12%;
+    font-size: 16px;
+    border: 0.1em solid rgb(208,220,217);
+    background-color: #FFFFFF;
+    color: rgb(22,58,52);
+    min-width: 270px;
+    z-index: 0;
+}
+.filter-right::before {
+   content: url('./assets/images/icon-search.svg');
+   position: absolute;
+   top: 1.4em;
+   left: 0.6em;
+   transform: translateY(-50%);
+   pointer-events: none;
+}
+.recipe-card {
+   border: 0.1em solid rgb(208,220,217);
+   border-radius: 10px;
+   padding: 0.6em;
+   min-width: 340px;
+   max-width: 360px;
+   text-align: start;
+   background-color: #FFFFFF;
+   overflow: hidden;
+   height: max-content;
+   display: flex;
+   flex-direction: column;
+   margin: 1.5% ;
+   width: 100%;
+  
+   @media (max-width: 1420px) {
+    margin: 1.2%;
+   }
+   
+   @media ( max-width: 1439px) {
+     max-width: 500px;
+    margin: 0.5% auto;
+   }
+
+   @media (max-width: 1340px) {
+    max-width: 500px;
+   }
+
+   @media ( max-width: 1110px) {
+    max-width: 660px;
+    width: 100%;
+   }
+}
+
+.recipe-card > *:not(:first-child):not(:last-child) {
+    margin-bottom: 5%;
+    padding: 0 1%;
+}
+.recipe-card h3 {
+    font-size: 21px;
+    overflow: hidden; 
+    text-overflow: ellipsis; /* Learnt this today */
+    white-space: nowrap;
+}
+.recipe-card > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 1em;
+    align-items: start;
+}
+.recipe-card p {
+    font-size: 15px;
+}
+.recipe-button {
+    align-self: center;
+    text-align: center;
+    padding: 3.2%;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(22,58,52);
+    color: #FFFFFF;
+    font-weight: 300;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 2% auto;
+}
+.recipe-button:hover {
+    transform: scale(1.01);
+}
+.recipe-card img {
+   width: 100%;
+   height: 280px;
+   object-fit: cover;
+   border-radius: 10px;
+   margin-bottom: 2%;
+
+    @media ( max-width: 1439px) {
+    height: 330px;
+   }
+
+   @media (max-width: 1389px) {
+   
+   }
+}
+.recipe-serving {
+   position: relative;
+   padding-left: 1.4em;
+}
+.recipe-serving::before {
+    content: url('./assets/images/icon-servings.svg');
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.recipe-prepMins {
+    position: relative;
+    padding-left: 1.4em;
+}
+.recipe-prepMins::before {
+    content: url('./assets/images/icon-prep-time.svg');
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.recipe-cookMins {
+    position: relative;
+    padding-left: 1.4em;
+}
+.recipe-cookMins::before {
+    content: url('./assets/images/icon-cook-time.svg');
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.recipe-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin: 1% 0;
+}
+/* Individual recipe page */
+.bread-crumbs {
+    margin: 3% 0;
+    text-align: start;
+}
+.bread-crumbs a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 18px;
+}
+.complete-recipe {
+    display: flex;
+    align-items: start;
+    border-bottom: 0.1em solid rgb(224,230,227);
+    margin: 1% auto;
+    padding: 1% 0 4%;
+
+    @media ( max-width: 712px) {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+.complete-recipe img {
+    max-width: 550px;
+    min-width: 280px;
+    width: 100%;
+    margin: 1% auto;
+    border-radius: 10px;
+}
+.complete-detail {
+    padding: 0 0 0 8%;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+ @media ( max-width: 712px) {
+        padding-left: 3%;
+        margin-top: 2%;
+    }
+}
+.complete-detail > *:not(:first-child){
+    margin: 1% 0;
+}
+.complete-detail > div {
+    display: flex;
+    gap: 3%;
+}
+.complete-detail ul li::before {
+    content: url('./assets/images/icon-bullet-point.svg');
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.bread-crumbs a {
+    padding: 1% 0.2%;
+}
+.bread-crumbs a:hover {
+    text-decoration: underline;
+}
+.other-recipes{
+    display: flex;
+    flex-direction: column; 
+    margin: 3% auto;  
+}
+.other-recipes h3 {
+    margin-bottom: 2%;
+    align-self: flex-start;
+}
+.three-recipes {
+    justify-content: space-between;
+    display: flex;
+    margin: 1% auto;
+     @media ( max-width: 712px) {
+       flex-direction: column;
+    }
+}
+
+.three-recipes .recipe-card {
+    min-width: 300px;
+    max-width: 380px;
+    margin: 2% 1%;
+}
+.three-recipes .recipe-card h3{
+    max-width: 95%;
+
+}
+
+@media( max-width: 850px) {
+    .nav-bar-list {
+        display: none;
+    }
+    .menu-tab {
+        display: flex;
+    }
+    .features-cards {
+    flex-direction: column; 
+}
+}
