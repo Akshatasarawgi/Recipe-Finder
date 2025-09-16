@@ -28,7 +28,9 @@ Users should be able to:
 - See hover and focus states for all interactive elements on the page
 
 ### Screenshot
-![alt text](Screenshot.png)
+![alt text](Screenshot.p<img width="474" height="772" alt="Screenshot" src="https://github.com/user-attachments/assets/3944734f-58a0-41bc-8d4c-f2b15950fb2b" />
+ng)
+
 
 ### Links
 
